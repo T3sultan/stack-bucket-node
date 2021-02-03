@@ -1,5 +1,5 @@
-const bucketRouter = require("./buckets.routes");
+const bucketRouter = require('./buckets.routes');
 
-module.exports=function(app){
-    app.use('/buckets',bucketRouter);
-}
+module.exports = function (app) {
+	app.use('/buckets', bucketRouter);
+};

@@ -1,8 +1,11 @@
-const router = require('express').Router(); 
+const router = require('express').Router();
 
-router.get('/',(req,res)=> {
-  
-    res.send("This is React Native")
+router.get('/', (req, res) => {
+	res.render('pages/buckets');
+});
+
+router.get('/:id', (req, res) => {
+	res.render('pages/bucket-details');
 });
 
 module.exports = router;
