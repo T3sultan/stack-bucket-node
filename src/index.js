@@ -2,6 +2,7 @@ const express = require("express");
 const path = require('path');
 const cors = require("cors");
 const app = express();
+const routes = require('./routes')
 
 app.use(cors());
 app.set('view engine','ejs');
@@ -9,9 +10,9 @@ app.set('views',path.join(__dirname,'views'))
 app.use(express.static(path.join(__dirname,'../','public')))
 // console.log(__dirname)
 
-
+routes(app);
 app.get('/',(req,res)=>{
-    throw new Error("Testing Error");
+   // throw new Error("Testing Error");
     res.send("<h1>Hello React Native Dev</h1>");
 })
 
